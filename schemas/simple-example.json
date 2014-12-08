@@ -3,19 +3,7 @@
 	"$schema": "http://json-schema.org/draft-03/schema",
 	"id": "http://jsonschema.net",
 	"required":false,
-	"extends":
-		{
-			"required":false
-		}
-	
-,
 	"properties":{
-		"RenameMe": {
-			"required":false
-		},
-		"RenameMe": {
-			"required":false
-		},
 		"article_id": {
 			"type":"string",
 			"id": "http://jsonschema.net/article_id",
