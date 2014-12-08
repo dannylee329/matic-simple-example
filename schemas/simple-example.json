@@ -1,57 +1,159 @@
 {
-  "name": "Simple example",
-  "description": "A simple example project to use with Matic. Hopefully looking at the structure of this project will assist in beginning to work with Schema and putting together your own project file. It is suggested that you use this project as a start point for understanding how Matic works",
-  "type": "object",
-  "properties": {
-    "id": {
-      "title": "Unique ID",
-      "description": "There will be many times your JSON schema needs an id, you might describe it like this.",
-      "type": "number",
-      "required": true
-    },
-    "name": {
-      "title": "The name for this object",
-      "description": "This object has a name too, it doesn't have to be unique.",
-      "type": "string",
-      "required": true,
-      "default": "anonymous"
-    },
-    "is": {
-      "title": "Is it or isn't it?",
-      "description": "This object can be or might not be but it must be one or the other.",
-      "type": "boolean",
-      "required": true
-    },
-    "things": {
-      "title": "Things for the object",
-      "description": "This object can have an array of things within it but it doesn't have to.",
-      "type": "array",
-      "items": {
-        "type":"string"
-      }
-    },
-    "otherThings": {
-      "title": "Other things for the object",
-      "description": "This object can have some other things too but these are expressed within an object.",
-      "type": "object",
-      "properties": {
-        "extraText": {
-          "title": "Extra text about the object",
-          "description": "Extra text can be put here.",
-          "type": "string"
-        },
-        "extraNumber": {
-          "title": "An extra number for the object",
-          "description": "A number between 1 and 10 can be added here.",
-          "type": "number",
-          "minimum": 1,
-          "maximum": 10
-        }
-      }
-    },
-    "nullThing": {
-      "title": null,
-      "description": null
-    }
-  }
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":false,
+	"extends":
+		{
+			"required":false
+		}
+	
+,
+	"properties":{
+		"RenameMe": {
+			"required":false
+		},
+		"RenameMe": {
+			"required":false
+		},
+		"article_id": {
+			"type":"string",
+			"id": "http://jsonschema.net/article_id",
+			"required":false
+		},
+		"count": {
+			"type":"number",
+			"id": "http://jsonschema.net/count",
+			"required":false
+		},
+		"name": {
+			"type":"string",
+			"id": "http://jsonschema.net/name",
+			"required":false
+		},
+		"properties": {
+			"type":"object",
+			"id": "http://jsonschema.net/properties",
+			"required":false,
+			"properties":{
+				"ad_unit": {
+					"type":"string",
+					"id": "http://jsonschema.net/properties/ad_unit",
+					"required":false
+				},
+				"browser": {
+					"type":"object",
+					"id": "http://jsonschema.net/properties/browser",
+					"required":false,
+					"properties":{
+						"device": {
+							"type":"string",
+							"id": "http://jsonschema.net/properties/browser/device",
+							"required":false
+						},
+						"name": {
+							"type":"string",
+							"id": "http://jsonschema.net/properties/browser/name",
+							"required":false
+						},
+						"os": {
+							"type":"string",
+							"id": "http://jsonschema.net/properties/browser/os",
+							"required":false
+						},
+						"version": {
+							"type":"string",
+							"id": "http://jsonschema.net/properties/browser/version",
+							"required":false
+						}
+					}
+				},
+				"language": {
+					"type":"string",
+					"id": "http://jsonschema.net/properties/language",
+					"required":false
+				},
+				"offers": {
+					"type":"array",
+					"id": "http://jsonschema.net/properties/offers",
+					"required":false,
+					"items":
+						{
+							"type":"object",
+							"id": "http://jsonschema.net/properties/offers/0",
+							"required":false,
+							"properties":{
+								"advertiser_id": {
+									"type":"string",
+									"id": "http://jsonschema.net/properties/offers/0/advertiser_id",
+									"required":false
+								},
+								"offer_id": {
+									"type":"string",
+									"id": "http://jsonschema.net/properties/offers/0/offer_id",
+									"required":false
+								},
+								"position": {
+									"type":"number",
+									"id": "http://jsonschema.net/properties/offers/0/position",
+									"required":false
+								},
+								"relation": {
+									"type":"string",
+									"id": "http://jsonschema.net/properties/offers/0/relation",
+									"required":false
+								},
+								"score": {
+									"type":"number",
+									"id": "http://jsonschema.net/properties/offers/0/score",
+									"required":false
+								}
+							}
+						}
+					
+
+				},
+				"referer": {
+					"type":"string",
+					"id": "http://jsonschema.net/properties/referer",
+					"required":false
+				},
+				"remote_ip": {
+					"type":"string",
+					"id": "http://jsonschema.net/properties/remote_ip",
+					"required":false
+				},
+				"request_uri": {
+					"type":"string",
+					"id": "http://jsonschema.net/properties/request_uri",
+					"required":false
+				},
+				"user_agent": {
+					"type":"string",
+					"id": "http://jsonschema.net/properties/user_agent",
+					"required":false
+				}
+			}
+		},
+		"publisher_id": {
+			"type":"string",
+			"id": "http://jsonschema.net/publisher_id",
+			"required":false
+		},
+		"resolution": {
+			"type":"string",
+			"id": "http://jsonschema.net/resolution",
+			"required":false
+		},
+		"timestamp": {
+			"type":"number",
+			"id": "http://jsonschema.net/timestamp",
+			"required":false
+		},
+		"tracking_id": {
+			"type":"string",
+			"id": "http://jsonschema.net/tracking_id",
+			"required":false
+		}
+	}
 }
